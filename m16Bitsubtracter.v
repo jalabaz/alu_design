@@ -1,0 +1,23 @@
+module m16Bitsubtracter( input[15:0] iA,			//data input A
+								 input[15:0] iB,			//data input B
+								 input iC,				//data input C
+								 output[15:0] oDiff,		        //difference out
+								 output oBorrow			//borrow out
+								 );
+wire[16:0] n;
+genvar i;
+
+generate
+for (i = 0; i < 16; i = i+1)
+	begin : forlooping
+	if (i == 0)
+		begin
+		assign n[i] = iC;
+		end
+	mFullsubtracter Fullsubtracter (.iA (iA[i]), .iB (iB[i]), .iC (n[i]), .oDiff (oDiff[i]), .oBorrow (n[i+1]));
+	end
+endgenerate
+
+assign oBorrow = 0;
+
+endmodule
