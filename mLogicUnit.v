@@ -36,7 +36,7 @@ assign oX = (iOpcode == `ocna) ?
 							((iOpcode == `ocand) ? 
 								nOutAnd[15:0] : 
 								((iOpcode == `ocxor) ? 
-									nOutXor[15:0] : 16'h0000))));	//results to 16`h0000 if iOpcode value is unknown/dontcare
+									nOutXor[15:0] : 16'h0000))));	//results to an all zero 16-bit if iOpcode value is unknown/dontcare
 
 //check if the output is a zero
 assign nZeroflagout = (oX == 16'h0000) ? 1'b1 : 1'b0;

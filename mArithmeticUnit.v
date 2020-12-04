@@ -14,6 +14,7 @@ wire nCarry,nBorrow;		//wire for the carry and borrow; borrow is always GND sinc
 wire[15:0] nAddAns;	//wire for the sum; used as input for MUX in accumulator
 wire[15:0] nSubAns;	//wire for the difference; used as input for MUX in accumulator
 
+//initialize all variables; used for checking the opcode
 `define opADD 2'b01
 `define opADC 2'b10
 `define opSUB 2'b11
@@ -28,7 +29,7 @@ m16Bitsubtracter bit16subtracter(iPortA[15:0],iPortB[15:0],1'b0,nSubAns[15:0],nB
 
 //code for carry flag
 assign nCarryflagin = (iOpcode == `opSUB) ? 1'b0: nCarry;	//if opcode is for subtraction, then carry is 0
-mDFF_Risingedge_Resetasynclow Carryflag(nCarryflagin,iClock,iReset,nCarryflagout);
+mDFF_Risingedge_Resetasynclow Carryflag(nCarryflagin,iClock,iReset,nCarryflagout);	//stores value of flag to flipflop
 //code for zero flag
 assign nZeroflagout = (oAccumulator == 16'h0000) ? 1'b1 : 1'b0;	//if accumulator is 0, then zero flag is 1
 
