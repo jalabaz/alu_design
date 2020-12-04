@@ -5,3 +5,4 @@ simulation/
 *.bak
 *.qsf
 *.qpf
+*.qws
