@@ -21,13 +21,10 @@ wire nReset = (checkifArith == 1'b1) ? 1'b1: 1'b0;		//resets the carry flipflop 
 
 //runs the functions(designated by their opcode) of both logic unit and arithmetic unit					
 mLogicUnit logic_unit (iA,iB,iOpcode,nOutLogic,nZeroLogic);
-mArithmeticUnit arith_unit (iA,iB,iOpArith,nOutArith,iClock,nReset,nCarryflagin, nZeroArith);
+mArithmeticUnit arith_unit (iA,iB,iOpArith,nOutArith,iClock,nReset,nCarryflagout, nZeroArith);
 
 //assigns the arithmetic unit output as the accumulator value if opcode is for the arithmetic unit; otherwise use logic unit output
 assign oAccumulator = (checkifArith == 1'b1) ? nOutArith: nOutLogic;
-
-//assigns the arithmetic unit carry flag as the ALU carry flag if opcode is for the arithmetic unit; otherwise use 0
-assign nCarryflagout = (checkifArith == 1'b1) ? nCarryflagin: 1'b0;
 
 //assigns the arithmetic unit zero flag as the ALU zero flag if opcode is for the arithmetic unit; otherwise use logic unit zero flag
 assign nZeroflagin = (checkifArith == 1'b1) ? nZeroArith: nZeroLogic;

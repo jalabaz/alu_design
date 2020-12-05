@@ -19,7 +19,7 @@ wire[15:0] nSubAns;	//wire for the difference; used as input for MUX in accumula
 `define opADC 2'b10
 `define opSUB 2'b11
 
-
+//checks if opcode is for subtraction; used for ternary operators
 assign checkifsub = (iOpcode == `opSUB) ? 1'b1 : 1'b0;
 //check if opcode is for addition with carry; apply carry as input if so
 assign enCin = (iOpcode == `opADC) ? 1'b1: 1'b0;
