@@ -17,7 +17,7 @@ wire nCarryflagin;	//used to check for carry flag
 wire[15:0] nOutLogic;	//output of the logic unit
 wire[15:0] nOutArith;	//output of the arithmetic unit
 wire checkifArith = (iOpcode >= `opcodeArith) ? 1'b1: 1'b0;	//checks if opcode value is for arithmetic unit; used for conditional operators
-wire nReset = (checkifArith == 1'b1) ? 1'b0: 1'b1;		//resets the carry flipflop of arithmetic unit if the opcode is designated for logic unit
+wire nReset = ~checkifArith;		//resets the carry flipflop of arithmetic unit if the opcode is designated for logic unit
 
 //runs the functions(designated by their opcode) of both logic unit and arithmetic unit					
 mLogicUnit logic_unit (iA,iB,iOpcode,nOutLogic,nZeroLogic);
