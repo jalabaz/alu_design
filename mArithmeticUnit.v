@@ -17,10 +17,9 @@ wire nResetin;
 wire[15:0] nDiffMagCom;	//wire for the difference; changes difference to 16'h0000 if B is greater than A
 
 //initialize all variables; used for checking the opcode
-`define opADD 2'b01
-`define opADC 2'b10
-`define opSUB 2'b11
-
+`define opADD 2'b01	//addition without carry
+`define opADC 2'b10	//addition with carry
+`define opSUB 2'b11	//subtraction
 //checks if opcode is for subtraction; used for ternary operators
 assign checkifsub = (iOpcode == `opSUB) ? 1'b1 : 1'b0;
 //check if opcode is for addition with carry; apply carry as input if so

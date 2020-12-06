@@ -1,13 +1,13 @@
-module aluMain (input[15:0] iA,
-					 input[15:0] iB,
-					 input[2:0] iOpcode,
-					 input iClock,
-					 output[15:0] oAccumulator,
-					 output nCarryflagout, nZeroflagout
-					);					
+module mALU (input[15:0] iA,
+					input[15:0] iB,
+					input[2:0] iOpcode,
+					input iClock,
+					output[15:0] oAccumulator,
+					output nCarryflagout, nZeroflagout
+					);
 
-// iOpcode values 3'b000 to 3'b100 -->	used by logic unit
-// iOpcode values 3'b101 to 3'b111 --> used by arithmetic unit
+// iOpcode values 3'bxx000 to 3'bxx100 -->	used by logic unit
+// iOpcode values 3'bxx101 to 3'bxx111 --> used by arithmetic unit
 `define opcodeArith 3'b101
 
 //initialize all wires
@@ -24,7 +24,7 @@ mLogicUnit logic_unit (iA,iB,iOpcode,nOutLogic,nZeroLogic);
 mArithmeticUnit arith_unit (iA,iB,iOpArith,nOutArith,iClock,nReset,nCarryflagout, nZeroArith);
 
 //assigns the arithmetic unit output as the accumulator value if opcode is for the arithmetic unit; otherwise use logic unit output
-assign oAccumulator = (checkifArith == 1'b1) ? nOutArith: nOutLogic;
+assign oAccumulator[15:0] = (checkifArith == 1'b1) ? nOutArith[15:0]: nOutLogic[15:0];
 
 //assigns the arithmetic unit zero flag as the ALU zero flag if opcode is for the arithmetic unit; otherwise use logic unit zero flag
 assign nZeroflagin = (checkifArith == 1'b1) ? nZeroArith: nZeroLogic;

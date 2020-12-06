@@ -13,11 +13,11 @@ wire[15:0] nOutOr;
 wire[15:0] nOutAnd;
 wire[15:0] nOutXor;
 //define variables; used for checking the opcode
-`define ocna 3'b000
-`define ocnb 3'b001
-`define ocor 3'b010
-`define ocand 3'b011
-`define ocxor 3'b100
+`define ocna 3'b000	//notA
+`define ocnb 3'b001	//notB
+`define ocor 3'b010	//AorB
+`define ocand 3'b011	//AandB
+`define ocxor 3'b100	//AxorB
 
 //runs all logic functions
 mNOTa NOTa (iA[15:0],iB[15:0], nOutA[15:0]);
