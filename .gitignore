@@ -4,5 +4,5 @@ output_files/
 simulation/
 *.bak
 *.qsf
-*.qpf
+.qpf
 *.qws
