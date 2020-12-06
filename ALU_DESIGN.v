@@ -16,9 +16,10 @@ module ALU_DESIGN (input[15:0] iA,
 wire[15:0] nRegA;
 wire[15:0] nRegB;
 
-//runs the functions(designated by their opcode) of both logic unit and arithmetic unit					
+//runs the ALU BLOCK			
 mALU ALU_BLOCK(nRegA[15:0],nRegB[15:0],iAluOpcode[2:0], iClock, oAccumulator[15:0], nCarryflagout, nZeroflagout);
+
+//passes the A and B inputs into the register
 mShiftReg REGA_BLOCK(iA[15:0],iClock,iRegACommand[2:0],nRegA[15:0]);
 mShiftReg REGB_BLOCK(iB[15:0],iClock,iRegBCommand[2:0],nRegB[15:0]);
-
 endmodule
