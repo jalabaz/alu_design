@@ -1,0 +1,5 @@
+module mNOTa(input [15:0] iA,input [15:0] iB, output[15:0] oX,output oZeroflagout);
+
+assign oX[15:0] = ~iA[15:0];
+assign oZeroflagout = (oX == 16'h0000) ? 1 : 0;	//if output is 0, then zero flag is 1
+endmodule

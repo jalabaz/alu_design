@@ -1,0 +1,26 @@
+module ALU_Design (input[15:0] iA,
+						input[15:0] iB,
+						input[2:0] iAluOpcode,
+						input[4:0] iRegACommand,
+						input[4:0] iRegBCommand,
+						input iClock,
+						output[15:0] oAccumulator,
+						output nCarryflagout, nZeroflagout
+						);
+
+//for iRegXCommands: x000 to x111 dictates the number of shift
+//							0xxx to 1xxx dictates the direction of shift
+
+//initialize all wires
+wire[1:0] iOpArith = iOpcode[1:0];	//arithmetic unit only uses 2-bit opcode; takes the first 2 bits of the ALU opcode
+wire nZeroflagin, nZeroLogic, nZeroArith;		//used to determine which zeroflag to use
+wire nCarryflagin;	//used to check for carry flag
+wire[15:0] nOutLogic;	//output of the logic unit
+wire[15:0] nOutArith;	//output of the arithmetic unit
+wire checkifArith = (iOpcode >= `opcodeArith) ? 1'b1: 1'b0;	//checks if opcode value is for arithmetic unit; used for conditional operators
+wire nReset = ~checkifArith;		//resets the carry flipflop of arithmetic unit if the opcode is designated for logic unit
+
+//runs the functions(designated by their opcode) of both logic unit and arithmetic unit					
+module mALU (iAluOpcode, iClock, oAccumulator, nCarryflagout, nZeroflagout);
+
+endmodule

@@ -1,0 +1,36 @@
+module aluMain (input[15:0] iA,
+					 input[15:0] iB,
+					 input[2:0] iO,
+					 output[15:0] oA,
+					 input iClock,
+					 output nCarryflagout, nZeroflagout
+					);
+
+wire nCarryflagin, nZeroflagin, nAdderCin, enCin,nCarry,nBorrow;
+wire[15:0] nAddAns;
+wire[15:0] nSubAns;
+
+
+`define opADD 2'b00
+`define opADC 2'b01
+`define opSUB 2'b10
+
+assign enCin = (iOpcode == `opADC) ? 1: 0;
+
+m16Bitadder bit16Adder(iPortA[15:0],iPortB[15:0],nAdderCin,nAddAns[15:0],nCarry);
+
+m16Bitsubtracter bit16subtracter(iPortA[15:0],iPortB[15:0],nAdderCin,nSubAns[15:0],nBorrow);
+
+assign nCarryflagin = (iOpcode == `opSUB) ? 0: nCarry;
+
+mDFF_Risingedge_Resetasynclow Carryflag(nCarryflagin,iClock,iReset,nCarryflagout);
+
+assign oAccumulator = (iOpcode == `opSUB) ? nSubAns[15:0]: nAddAns[15:0];
+
+
+assign nZeroflagin = (oAccumulator == 16'h0000) ? 1 : 0;
+mDFF_Risingedge_Resetasynclow Zeroflag(nZeroflagin,iClock,iReset,nZeroflagout);
+
+assign nAdderCin = enCin & nCarryflagout;
+
+endmodule

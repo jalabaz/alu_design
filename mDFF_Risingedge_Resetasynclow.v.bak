@@ -1,0 +1,4 @@
+module mDFF_Risingedge_Resetasynclow (input iD,iClock,iReset
+													output reg oQ
+													);
+													

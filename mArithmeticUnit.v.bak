@@ -1,0 +1,14 @@
+module mArithmeticUnit (input[15:0] iPortA,
+								input[15:0] iPortB,
+								input[1:0] iOpcode,
+								output[2:0] oAccumulator,
+								input iClock,
+								input iReset,
+								output nCarryflagout,
+								);
+
+wire nCarryflagin, nAdderCin,enCin;
+
+`define opADD 2'b00
+`define opADC 2'b01
+`define opSUB 2'b10

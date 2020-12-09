@@ -1,0 +1,31 @@
+module mLogicUnit (iA,iB,iOpcode,oX,oZeroflagout);
+input[15:0] iA;
+input[15:0] iB;
+input[2:0] iOpcode;
+output reg[15:0] oX;
+output reg oZeroflagout;
+
+
+always@(iA or iB or iOpcode)
+	begin
+		case(iOpcode)
+			3'b000: oX= iA[15:0] & iB[15:0];
+			3'b001: oX= iA[15:0] | iB[15:0];
+			3'b010: oX= iA[15:0] ^ iB[15:0];
+			3'b011: oX= ~!iA[15:0];
+			3'b100: oX= ~iB[15:0];
+		endcase
+	end
+
+always@(oX)
+	if (oX == 0)
+		begin
+			oZeroflagout = 1;
+		end
+	else
+		begin
+			oZeroflagout = 0;
+		end
+
+
+endmodule

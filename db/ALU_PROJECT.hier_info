@@ -1,0 +1,1702 @@
+|ALU_DESIGN
+iA[0] => iA[0].IN1
+iA[1] => iA[1].IN1
+iA[2] => iA[2].IN1
+iA[3] => iA[3].IN1
+iA[4] => iA[4].IN1
+iA[5] => iA[5].IN1
+iA[6] => iA[6].IN1
+iA[7] => iA[7].IN1
+iA[8] => iA[8].IN1
+iA[9] => iA[9].IN1
+iA[10] => iA[10].IN1
+iA[11] => iA[11].IN1
+iA[12] => iA[12].IN1
+iA[13] => iA[13].IN1
+iA[14] => iA[14].IN1
+iA[15] => iA[15].IN1
+iB[0] => iB[0].IN1
+iB[1] => iB[1].IN1
+iB[2] => iB[2].IN1
+iB[3] => iB[3].IN1
+iB[4] => iB[4].IN1
+iB[5] => iB[5].IN1
+iB[6] => iB[6].IN1
+iB[7] => iB[7].IN1
+iB[8] => iB[8].IN1
+iB[9] => iB[9].IN1
+iB[10] => iB[10].IN1
+iB[11] => iB[11].IN1
+iB[12] => iB[12].IN1
+iB[13] => iB[13].IN1
+iB[14] => iB[14].IN1
+iB[15] => iB[15].IN1
+iAluOpcode[0] => iAluOpcode[0].IN1
+iAluOpcode[1] => iAluOpcode[1].IN1
+iAluOpcode[2] => iAluOpcode[2].IN1
+iRegACommand[0] => iRegACommand[0].IN1
+iRegACommand[1] => iRegACommand[1].IN1
+iRegACommand[2] => iRegACommand[2].IN1
+iRegBCommand[0] => iRegBCommand[0].IN1
+iRegBCommand[1] => iRegBCommand[1].IN1
+iRegBCommand[2] => iRegBCommand[2].IN1
+iClock => iClock.IN3
+oAccumulator[0] <= mALU:ALU_BLOCK.port4
+oAccumulator[1] <= mALU:ALU_BLOCK.port4
+oAccumulator[2] <= mALU:ALU_BLOCK.port4
+oAccumulator[3] <= mALU:ALU_BLOCK.port4
+oAccumulator[4] <= mALU:ALU_BLOCK.port4
+oAccumulator[5] <= mALU:ALU_BLOCK.port4
+oAccumulator[6] <= mALU:ALU_BLOCK.port4
+oAccumulator[7] <= mALU:ALU_BLOCK.port4
+oAccumulator[8] <= mALU:ALU_BLOCK.port4
+oAccumulator[9] <= mALU:ALU_BLOCK.port4
+oAccumulator[10] <= mALU:ALU_BLOCK.port4
+oAccumulator[11] <= mALU:ALU_BLOCK.port4
+oAccumulator[12] <= mALU:ALU_BLOCK.port4
+oAccumulator[13] <= mALU:ALU_BLOCK.port4
+oAccumulator[14] <= mALU:ALU_BLOCK.port4
+oAccumulator[15] <= mALU:ALU_BLOCK.port4
+nCarryflagout <= mALU:ALU_BLOCK.port5
+nZeroflagout <= mALU:ALU_BLOCK.port6
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK
+iA[0] => iA[0].IN2
+iA[1] => iA[1].IN2
+iA[2] => iA[2].IN2
+iA[3] => iA[3].IN2
+iA[4] => iA[4].IN2
+iA[5] => iA[5].IN2
+iA[6] => iA[6].IN2
+iA[7] => iA[7].IN2
+iA[8] => iA[8].IN2
+iA[9] => iA[9].IN2
+iA[10] => iA[10].IN2
+iA[11] => iA[11].IN2
+iA[12] => iA[12].IN2
+iA[13] => iA[13].IN2
+iA[14] => iA[14].IN2
+iA[15] => iA[15].IN2
+iB[0] => iB[0].IN2
+iB[1] => iB[1].IN2
+iB[2] => iB[2].IN2
+iB[3] => iB[3].IN2
+iB[4] => iB[4].IN2
+iB[5] => iB[5].IN2
+iB[6] => iB[6].IN2
+iB[7] => iB[7].IN2
+iB[8] => iB[8].IN2
+iB[9] => iB[9].IN2
+iB[10] => iB[10].IN2
+iB[11] => iB[11].IN2
+iB[12] => iB[12].IN2
+iB[13] => iB[13].IN2
+iB[14] => iB[14].IN2
+iB[15] => iB[15].IN2
+iOpcode[0] => iOpcode[0].IN2
+iOpcode[1] => iOpcode[1].IN2
+iOpcode[2] => iOpcode[2].IN1
+iClock => iClock.IN2
+oAccumulator[0] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[1] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[2] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[3] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[4] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[5] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[6] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[7] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[8] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[9] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[10] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[11] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[12] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[13] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[14] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[15] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+nCarryflagout <= mArithmeticUnit:arith_unit.port6
+nZeroflagout <= mDFF_Risingedge_Resetasynclow:Zeroflag.port3
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mLogicUnit:logic_unit
+iA[0] => iA[0].IN5
+iA[1] => iA[1].IN5
+iA[2] => iA[2].IN5
+iA[3] => iA[3].IN5
+iA[4] => iA[4].IN5
+iA[5] => iA[5].IN5
+iA[6] => iA[6].IN5
+iA[7] => iA[7].IN5
+iA[8] => iA[8].IN5
+iA[9] => iA[9].IN5
+iA[10] => iA[10].IN5
+iA[11] => iA[11].IN5
+iA[12] => iA[12].IN5
+iA[13] => iA[13].IN5
+iA[14] => iA[14].IN5
+iA[15] => iA[15].IN5
+iB[0] => iB[0].IN5
+iB[1] => iB[1].IN5
+iB[2] => iB[2].IN5
+iB[3] => iB[3].IN5
+iB[4] => iB[4].IN5
+iB[5] => iB[5].IN5
+iB[6] => iB[6].IN5
+iB[7] => iB[7].IN5
+iB[8] => iB[8].IN5
+iB[9] => iB[9].IN5
+iB[10] => iB[10].IN5
+iB[11] => iB[11].IN5
+iB[12] => iB[12].IN5
+iB[13] => iB[13].IN5
+iB[14] => iB[14].IN5
+iB[15] => iB[15].IN5
+iOpcode[0] => Equal0.IN2
+iOpcode[0] => Equal1.IN0
+iOpcode[0] => Equal2.IN2
+iOpcode[0] => Equal3.IN1
+iOpcode[0] => Equal4.IN2
+iOpcode[1] => Equal0.IN1
+iOpcode[1] => Equal1.IN2
+iOpcode[1] => Equal2.IN0
+iOpcode[1] => Equal3.IN0
+iOpcode[1] => Equal4.IN1
+iOpcode[2] => Equal0.IN0
+iOpcode[2] => Equal1.IN1
+iOpcode[2] => Equal2.IN1
+iOpcode[2] => Equal3.IN2
+iOpcode[2] => Equal4.IN0
+oX[0] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[1] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[2] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[3] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[4] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[5] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[6] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[7] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[8] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[9] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[10] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[11] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[12] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[13] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[14] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[15] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+nZeroflagout <= Equal5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mLogicUnit:logic_unit|mNOTa:NOTa
+iA[0] => oX[0].DATAIN
+iA[1] => oX[1].DATAIN
+iA[2] => oX[2].DATAIN
+iA[3] => oX[3].DATAIN
+iA[4] => oX[4].DATAIN
+iA[5] => oX[5].DATAIN
+iA[6] => oX[6].DATAIN
+iA[7] => oX[7].DATAIN
+iA[8] => oX[8].DATAIN
+iA[9] => oX[9].DATAIN
+iA[10] => oX[10].DATAIN
+iA[11] => oX[11].DATAIN
+iA[12] => oX[12].DATAIN
+iA[13] => oX[13].DATAIN
+iA[14] => oX[14].DATAIN
+iA[15] => oX[15].DATAIN
+iB[0] => ~NO_FANOUT~
+iB[1] => ~NO_FANOUT~
+iB[2] => ~NO_FANOUT~
+iB[3] => ~NO_FANOUT~
+iB[4] => ~NO_FANOUT~
+iB[5] => ~NO_FANOUT~
+iB[6] => ~NO_FANOUT~
+iB[7] => ~NO_FANOUT~
+iB[8] => ~NO_FANOUT~
+iB[9] => ~NO_FANOUT~
+iB[10] => ~NO_FANOUT~
+iB[11] => ~NO_FANOUT~
+iB[12] => ~NO_FANOUT~
+iB[13] => ~NO_FANOUT~
+iB[14] => ~NO_FANOUT~
+iB[15] => ~NO_FANOUT~
+oX[0] <= iA[0].DB_MAX_OUTPUT_PORT_TYPE
+oX[1] <= iA[1].DB_MAX_OUTPUT_PORT_TYPE
+oX[2] <= iA[2].DB_MAX_OUTPUT_PORT_TYPE
+oX[3] <= iA[3].DB_MAX_OUTPUT_PORT_TYPE
+oX[4] <= iA[4].DB_MAX_OUTPUT_PORT_TYPE
+oX[5] <= iA[5].DB_MAX_OUTPUT_PORT_TYPE
+oX[6] <= iA[6].DB_MAX_OUTPUT_PORT_TYPE
+oX[7] <= iA[7].DB_MAX_OUTPUT_PORT_TYPE
+oX[8] <= iA[8].DB_MAX_OUTPUT_PORT_TYPE
+oX[9] <= iA[9].DB_MAX_OUTPUT_PORT_TYPE
+oX[10] <= iA[10].DB_MAX_OUTPUT_PORT_TYPE
+oX[11] <= iA[11].DB_MAX_OUTPUT_PORT_TYPE
+oX[12] <= iA[12].DB_MAX_OUTPUT_PORT_TYPE
+oX[13] <= iA[13].DB_MAX_OUTPUT_PORT_TYPE
+oX[14] <= iA[14].DB_MAX_OUTPUT_PORT_TYPE
+oX[15] <= iA[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mLogicUnit:logic_unit|mNOTb:NOTb
+iA[0] => ~NO_FANOUT~
+iA[1] => ~NO_FANOUT~
+iA[2] => ~NO_FANOUT~
+iA[3] => ~NO_FANOUT~
+iA[4] => ~NO_FANOUT~
+iA[5] => ~NO_FANOUT~
+iA[6] => ~NO_FANOUT~
+iA[7] => ~NO_FANOUT~
+iA[8] => ~NO_FANOUT~
+iA[9] => ~NO_FANOUT~
+iA[10] => ~NO_FANOUT~
+iA[11] => ~NO_FANOUT~
+iA[12] => ~NO_FANOUT~
+iA[13] => ~NO_FANOUT~
+iA[14] => ~NO_FANOUT~
+iA[15] => ~NO_FANOUT~
+iB[0] => oX[0].DATAIN
+iB[1] => oX[1].DATAIN
+iB[2] => oX[2].DATAIN
+iB[3] => oX[3].DATAIN
+iB[4] => oX[4].DATAIN
+iB[5] => oX[5].DATAIN
+iB[6] => oX[6].DATAIN
+iB[7] => oX[7].DATAIN
+iB[8] => oX[8].DATAIN
+iB[9] => oX[9].DATAIN
+iB[10] => oX[10].DATAIN
+iB[11] => oX[11].DATAIN
+iB[12] => oX[12].DATAIN
+iB[13] => oX[13].DATAIN
+iB[14] => oX[14].DATAIN
+iB[15] => oX[15].DATAIN
+oX[0] <= iB[0].DB_MAX_OUTPUT_PORT_TYPE
+oX[1] <= iB[1].DB_MAX_OUTPUT_PORT_TYPE
+oX[2] <= iB[2].DB_MAX_OUTPUT_PORT_TYPE
+oX[3] <= iB[3].DB_MAX_OUTPUT_PORT_TYPE
+oX[4] <= iB[4].DB_MAX_OUTPUT_PORT_TYPE
+oX[5] <= iB[5].DB_MAX_OUTPUT_PORT_TYPE
+oX[6] <= iB[6].DB_MAX_OUTPUT_PORT_TYPE
+oX[7] <= iB[7].DB_MAX_OUTPUT_PORT_TYPE
+oX[8] <= iB[8].DB_MAX_OUTPUT_PORT_TYPE
+oX[9] <= iB[9].DB_MAX_OUTPUT_PORT_TYPE
+oX[10] <= iB[10].DB_MAX_OUTPUT_PORT_TYPE
+oX[11] <= iB[11].DB_MAX_OUTPUT_PORT_TYPE
+oX[12] <= iB[12].DB_MAX_OUTPUT_PORT_TYPE
+oX[13] <= iB[13].DB_MAX_OUTPUT_PORT_TYPE
+oX[14] <= iB[14].DB_MAX_OUTPUT_PORT_TYPE
+oX[15] <= iB[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mLogicUnit:logic_unit|mANDgate:ANDgate
+iA[0] => oX.IN0
+iA[1] => oX.IN0
+iA[2] => oX.IN0
+iA[3] => oX.IN0
+iA[4] => oX.IN0
+iA[5] => oX.IN0
+iA[6] => oX.IN0
+iA[7] => oX.IN0
+iA[8] => oX.IN0
+iA[9] => oX.IN0
+iA[10] => oX.IN0
+iA[11] => oX.IN0
+iA[12] => oX.IN0
+iA[13] => oX.IN0
+iA[14] => oX.IN0
+iA[15] => oX.IN0
+iB[0] => oX.IN1
+iB[1] => oX.IN1
+iB[2] => oX.IN1
+iB[3] => oX.IN1
+iB[4] => oX.IN1
+iB[5] => oX.IN1
+iB[6] => oX.IN1
+iB[7] => oX.IN1
+iB[8] => oX.IN1
+iB[9] => oX.IN1
+iB[10] => oX.IN1
+iB[11] => oX.IN1
+iB[12] => oX.IN1
+iB[13] => oX.IN1
+iB[14] => oX.IN1
+iB[15] => oX.IN1
+oX[0] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[1] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[2] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[3] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[4] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[5] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[6] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[7] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[8] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[9] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[10] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[11] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[12] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[13] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[14] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[15] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mLogicUnit:logic_unit|mORgate:ORgate
+iA[0] => oX.IN0
+iA[1] => oX.IN0
+iA[2] => oX.IN0
+iA[3] => oX.IN0
+iA[4] => oX.IN0
+iA[5] => oX.IN0
+iA[6] => oX.IN0
+iA[7] => oX.IN0
+iA[8] => oX.IN0
+iA[9] => oX.IN0
+iA[10] => oX.IN0
+iA[11] => oX.IN0
+iA[12] => oX.IN0
+iA[13] => oX.IN0
+iA[14] => oX.IN0
+iA[15] => oX.IN0
+iB[0] => oX.IN1
+iB[1] => oX.IN1
+iB[2] => oX.IN1
+iB[3] => oX.IN1
+iB[4] => oX.IN1
+iB[5] => oX.IN1
+iB[6] => oX.IN1
+iB[7] => oX.IN1
+iB[8] => oX.IN1
+iB[9] => oX.IN1
+iB[10] => oX.IN1
+iB[11] => oX.IN1
+iB[12] => oX.IN1
+iB[13] => oX.IN1
+iB[14] => oX.IN1
+iB[15] => oX.IN1
+oX[0] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[1] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[2] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[3] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[4] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[5] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[6] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[7] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[8] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[9] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[10] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[11] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[12] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[13] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[14] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[15] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mLogicUnit:logic_unit|mXORgate:XORgate
+iA[0] => oX.IN0
+iA[1] => oX.IN0
+iA[2] => oX.IN0
+iA[3] => oX.IN0
+iA[4] => oX.IN0
+iA[5] => oX.IN0
+iA[6] => oX.IN0
+iA[7] => oX.IN0
+iA[8] => oX.IN0
+iA[9] => oX.IN0
+iA[10] => oX.IN0
+iA[11] => oX.IN0
+iA[12] => oX.IN0
+iA[13] => oX.IN0
+iA[14] => oX.IN0
+iA[15] => oX.IN0
+iB[0] => oX.IN1
+iB[1] => oX.IN1
+iB[2] => oX.IN1
+iB[3] => oX.IN1
+iB[4] => oX.IN1
+iB[5] => oX.IN1
+iB[6] => oX.IN1
+iB[7] => oX.IN1
+iB[8] => oX.IN1
+iB[9] => oX.IN1
+iB[10] => oX.IN1
+iB[11] => oX.IN1
+iB[12] => oX.IN1
+iB[13] => oX.IN1
+iB[14] => oX.IN1
+iB[15] => oX.IN1
+oX[0] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[1] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[2] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[3] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[4] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[5] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[6] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[7] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[8] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[9] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[10] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[11] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[12] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[13] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[14] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+oX[15] <= oX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit
+iPortA[0] => iPortA[0].IN2
+iPortA[1] => iPortA[1].IN2
+iPortA[2] => iPortA[2].IN2
+iPortA[3] => iPortA[3].IN2
+iPortA[4] => iPortA[4].IN2
+iPortA[5] => iPortA[5].IN2
+iPortA[6] => iPortA[6].IN2
+iPortA[7] => iPortA[7].IN2
+iPortA[8] => iPortA[8].IN2
+iPortA[9] => iPortA[9].IN2
+iPortA[10] => iPortA[10].IN2
+iPortA[11] => iPortA[11].IN2
+iPortA[12] => iPortA[12].IN2
+iPortA[13] => iPortA[13].IN2
+iPortA[14] => iPortA[14].IN2
+iPortA[15] => iPortA[15].IN2
+iPortB[0] => iPortB[0].IN2
+iPortB[1] => iPortB[1].IN2
+iPortB[2] => iPortB[2].IN2
+iPortB[3] => iPortB[3].IN2
+iPortB[4] => iPortB[4].IN2
+iPortB[5] => iPortB[5].IN2
+iPortB[6] => iPortB[6].IN2
+iPortB[7] => iPortB[7].IN2
+iPortB[8] => iPortB[8].IN2
+iPortB[9] => iPortB[9].IN2
+iPortB[10] => iPortB[10].IN2
+iPortB[11] => iPortB[11].IN2
+iPortB[12] => iPortB[12].IN2
+iPortB[13] => iPortB[13].IN2
+iPortB[14] => iPortB[14].IN2
+iPortB[15] => iPortB[15].IN2
+iOpcode[0] => Equal0.IN1
+iOpcode[0] => Equal1.IN1
+iOpcode[1] => Equal0.IN0
+iOpcode[1] => Equal1.IN0
+oAccumulator[0] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[1] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[2] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[3] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[4] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[5] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[6] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[7] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[8] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[9] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[10] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[11] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[12] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[13] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[14] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+oAccumulator[15] <= oAccumulator.DB_MAX_OUTPUT_PORT_TYPE
+iClock => iClock.IN1
+iReset => NOR_resetpin.IN1
+nCarryflagout <= mDFF_Risingedge_Resetasynclow:Carryflag.port3
+nZeroflagout <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder
+iA[0] => iA[0].IN1
+iA[1] => iA[1].IN1
+iA[2] => iA[2].IN1
+iA[3] => iA[3].IN1
+iA[4] => iA[4].IN1
+iA[5] => iA[5].IN1
+iA[6] => iA[6].IN1
+iA[7] => iA[7].IN1
+iA[8] => iA[8].IN1
+iA[9] => iA[9].IN1
+iA[10] => iA[10].IN1
+iA[11] => iA[11].IN1
+iA[12] => iA[12].IN1
+iA[13] => iA[13].IN1
+iA[14] => iA[14].IN1
+iA[15] => iA[15].IN1
+iB[0] => iB[0].IN1
+iB[1] => iB[1].IN1
+iB[2] => iB[2].IN1
+iB[3] => iB[3].IN1
+iB[4] => iB[4].IN1
+iB[5] => iB[5].IN1
+iB[6] => iB[6].IN1
+iB[7] => iB[7].IN1
+iB[8] => iB[8].IN1
+iB[9] => iB[9].IN1
+iB[10] => iB[10].IN1
+iB[11] => iB[11].IN1
+iB[12] => iB[12].IN1
+iB[13] => iB[13].IN1
+iB[14] => iB[14].IN1
+iB[15] => iB[15].IN1
+iC => n[0].IN1
+oSum[0] <= mFulladder:forlooping[0].Fulladder.oSum
+oSum[1] <= mFulladder:forlooping[1].Fulladder.oSum
+oSum[2] <= mFulladder:forlooping[2].Fulladder.oSum
+oSum[3] <= mFulladder:forlooping[3].Fulladder.oSum
+oSum[4] <= mFulladder:forlooping[4].Fulladder.oSum
+oSum[5] <= mFulladder:forlooping[5].Fulladder.oSum
+oSum[6] <= mFulladder:forlooping[6].Fulladder.oSum
+oSum[7] <= mFulladder:forlooping[7].Fulladder.oSum
+oSum[8] <= mFulladder:forlooping[8].Fulladder.oSum
+oSum[9] <= mFulladder:forlooping[9].Fulladder.oSum
+oSum[10] <= mFulladder:forlooping[10].Fulladder.oSum
+oSum[11] <= mFulladder:forlooping[11].Fulladder.oSum
+oSum[12] <= mFulladder:forlooping[12].Fulladder.oSum
+oSum[13] <= mFulladder:forlooping[13].Fulladder.oSum
+oSum[14] <= mFulladder:forlooping[14].Fulladder.oSum
+oSum[15] <= mFulladder:forlooping[15].Fulladder.oSum
+oCarryout <= mFulladder:forlooping[15].Fulladder.oCarryout
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[0].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[0].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[0].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[1].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[1].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[1].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[2].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[2].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[2].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[3].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[3].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[3].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[4].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[4].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[4].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[5].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[5].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[5].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[6].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[6].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[6].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[7].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[7].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[7].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[8].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[8].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[8].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[9].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[9].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[9].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[10].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[10].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[10].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[11].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[11].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[11].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[12].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[12].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[12].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[13].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[13].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[13].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[14].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[14].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[14].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[15].Fulladder
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oSum <= mHalfadder:Halfadder_1.oSum
+oCarryout <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[15].Fulladder|mHalfadder:Halfadder_0
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitadder:bit16Adder|mFulladder:forlooping[15].Fulladder|mHalfadder:Halfadder_1
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter
+iA[0] => iA[0].IN1
+iA[1] => iA[1].IN1
+iA[2] => iA[2].IN1
+iA[3] => iA[3].IN1
+iA[4] => iA[4].IN1
+iA[5] => iA[5].IN1
+iA[6] => iA[6].IN1
+iA[7] => iA[7].IN1
+iA[8] => iA[8].IN1
+iA[9] => iA[9].IN1
+iA[10] => iA[10].IN1
+iA[11] => iA[11].IN1
+iA[12] => iA[12].IN1
+iA[13] => iA[13].IN1
+iA[14] => iA[14].IN1
+iA[15] => iA[15].IN1
+iB[0] => iB[0].IN1
+iB[1] => iB[1].IN1
+iB[2] => iB[2].IN1
+iB[3] => iB[3].IN1
+iB[4] => iB[4].IN1
+iB[5] => iB[5].IN1
+iB[6] => iB[6].IN1
+iB[7] => iB[7].IN1
+iB[8] => iB[8].IN1
+iB[9] => iB[9].IN1
+iB[10] => iB[10].IN1
+iB[11] => iB[11].IN1
+iB[12] => iB[12].IN1
+iB[13] => iB[13].IN1
+iB[14] => iB[14].IN1
+iB[15] => iB[15].IN1
+iC => n[0].IN1
+oDiff[0] <= mFullsubtracter:forlooping[0].Fullsubtracter.oDiff
+oDiff[1] <= mFullsubtracter:forlooping[1].Fullsubtracter.oDiff
+oDiff[2] <= mFullsubtracter:forlooping[2].Fullsubtracter.oDiff
+oDiff[3] <= mFullsubtracter:forlooping[3].Fullsubtracter.oDiff
+oDiff[4] <= mFullsubtracter:forlooping[4].Fullsubtracter.oDiff
+oDiff[5] <= mFullsubtracter:forlooping[5].Fullsubtracter.oDiff
+oDiff[6] <= mFullsubtracter:forlooping[6].Fullsubtracter.oDiff
+oDiff[7] <= mFullsubtracter:forlooping[7].Fullsubtracter.oDiff
+oDiff[8] <= mFullsubtracter:forlooping[8].Fullsubtracter.oDiff
+oDiff[9] <= mFullsubtracter:forlooping[9].Fullsubtracter.oDiff
+oDiff[10] <= mFullsubtracter:forlooping[10].Fullsubtracter.oDiff
+oDiff[11] <= mFullsubtracter:forlooping[11].Fullsubtracter.oDiff
+oDiff[12] <= mFullsubtracter:forlooping[12].Fullsubtracter.oDiff
+oDiff[13] <= mFullsubtracter:forlooping[13].Fullsubtracter.oDiff
+oDiff[14] <= mFullsubtracter:forlooping[14].Fullsubtracter.oDiff
+oDiff[15] <= mFullsubtracter:forlooping[15].Fullsubtracter.oDiff
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[0].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[0].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[0].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[1].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[1].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[1].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[2].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[2].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[2].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[3].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[3].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[3].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[4].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[4].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[4].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[5].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[5].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[5].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[6].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[6].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[6].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[7].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[7].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[7].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[8].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[8].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[8].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[9].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[9].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[9].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[10].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[10].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[10].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[11].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[11].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[11].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[12].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[12].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[12].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[13].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[13].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[13].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[14].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[14].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[14].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[15].Fullsubtracter
+iA => iA.IN1
+iB => iB.IN1
+iC => iC.IN1
+oDiff <= mHalfsubtracter:Halfsubtracter.oDiff
+oBorrow <= OR_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[15].Fullsubtracter|mHalfadder:Halfadder
+iA => oCarryout.IN0
+iA => oSum.IN0
+iB => oCarryout.IN1
+iB => oSum.IN1
+oSum <= oSum.DB_MAX_OUTPUT_PORT_TYPE
+oCarryout <= oCarryout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|m16Bitsubtracter:bit16subtracter|mFullsubtracter:forlooping[15].Fullsubtracter|mHalfsubtracter:Halfsubtracter
+iA => oDiff.IN0
+iA => oBorrow.IN0
+iB => oBorrow.IN1
+iB => oDiff.IN1
+oDiff <= oDiff.DB_MAX_OUTPUT_PORT_TYPE
+oBorrow <= oBorrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mArithmeticUnit:arith_unit|mDFF_Risingedge_Resetasynclow:Carryflag
+iD => oQ~reg0.DATAIN
+iClock => oQ~reg0.CLK
+iReset => oQ~reg0.ACLR
+oQ <= oQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mALU:ALU_BLOCK|mDFF_Risingedge_Resetasynclow:Zeroflag
+iD => oQ~reg0.DATAIN
+iClock => oQ~reg0.CLK
+iReset => oQ~reg0.ACLR
+oQ <= oQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mShiftReg:REGA_BLOCK
+iD[0] => oQ.DATAB
+iD[0] => oQ.DATAA
+iD[0] => oQ.DATAB
+iD[0] => oQ.DATAB
+iD[1] => oQ.DATAA
+iD[1] => oQ.DATAB
+iD[1] => oQ.DATAB
+iD[1] => oQ.DATAB
+iD[1] => oQ.DATAB
+iD[2] => oQ.DATAA
+iD[2] => oQ.DATAB
+iD[2] => oQ.DATAB
+iD[2] => oQ.DATAB
+iD[2] => oQ.DATAB
+iD[3] => oQ.DATAA
+iD[3] => oQ.DATAB
+iD[3] => oQ.DATAB
+iD[3] => oQ.DATAB
+iD[3] => oQ.DATAB
+iD[4] => oQ.DATAA
+iD[4] => oQ.DATAB
+iD[4] => oQ.DATAB
+iD[4] => oQ.DATAB
+iD[4] => oQ.DATAB
+iD[5] => oQ.DATAA
+iD[5] => oQ.DATAB
+iD[5] => oQ.DATAB
+iD[5] => oQ.DATAB
+iD[5] => oQ.DATAB
+iD[6] => oQ.DATAA
+iD[6] => oQ.DATAB
+iD[6] => oQ.DATAB
+iD[6] => oQ.DATAB
+iD[6] => oQ.DATAB
+iD[7] => oQ.DATAA
+iD[7] => oQ.DATAB
+iD[7] => oQ.DATAB
+iD[7] => oQ.DATAB
+iD[7] => oQ.DATAB
+iD[8] => oQ.DATAA
+iD[8] => oQ.DATAB
+iD[8] => oQ.DATAB
+iD[8] => oQ.DATAB
+iD[8] => oQ.DATAB
+iD[9] => oQ.DATAA
+iD[9] => oQ.DATAB
+iD[9] => oQ.DATAB
+iD[9] => oQ.DATAB
+iD[9] => oQ.DATAB
+iD[10] => oQ.DATAA
+iD[10] => oQ.DATAB
+iD[10] => oQ.DATAB
+iD[10] => oQ.DATAB
+iD[10] => oQ.DATAB
+iD[11] => oQ.DATAA
+iD[11] => oQ.DATAB
+iD[11] => oQ.DATAB
+iD[11] => oQ.DATAB
+iD[11] => oQ.DATAB
+iD[12] => oQ.DATAA
+iD[12] => oQ.DATAB
+iD[12] => oQ.DATAB
+iD[12] => oQ.DATAB
+iD[12] => oQ.DATAB
+iD[13] => oQ.DATAA
+iD[13] => oQ.DATAB
+iD[13] => oQ.DATAB
+iD[13] => oQ.DATAB
+iD[13] => oQ.DATAB
+iD[14] => oQ.DATAA
+iD[14] => oQ.DATAB
+iD[14] => oQ.DATAB
+iD[14] => oQ.DATAB
+iD[14] => oQ.DATAB
+iD[15] => oQ.DATAA
+iD[15] => oQ.DATAB
+iD[15] => oQ.DATAB
+iD[15] => oQ.DATAB
+iClock => oQ[0]~reg0.CLK
+iClock => oQ[1]~reg0.CLK
+iClock => oQ[2]~reg0.CLK
+iClock => oQ[3]~reg0.CLK
+iClock => oQ[4]~reg0.CLK
+iClock => oQ[5]~reg0.CLK
+iClock => oQ[6]~reg0.CLK
+iClock => oQ[7]~reg0.CLK
+iClock => oQ[8]~reg0.CLK
+iClock => oQ[9]~reg0.CLK
+iClock => oQ[10]~reg0.CLK
+iClock => oQ[11]~reg0.CLK
+iClock => oQ[12]~reg0.CLK
+iClock => oQ[13]~reg0.CLK
+iClock => oQ[14]~reg0.CLK
+iClock => oQ[15]~reg0.CLK
+RegCommand[0] => Equal0.IN2
+RegCommand[0] => Equal1.IN0
+RegCommand[0] => Equal2.IN1
+RegCommand[0] => Equal3.IN2
+RegCommand[1] => Equal0.IN1
+RegCommand[1] => Equal1.IN2
+RegCommand[1] => Equal2.IN0
+RegCommand[1] => Equal3.IN0
+RegCommand[2] => Equal0.IN0
+RegCommand[2] => Equal1.IN1
+RegCommand[2] => Equal2.IN2
+RegCommand[2] => Equal3.IN1
+oQ[0] <= oQ[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[1] <= oQ[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[2] <= oQ[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[3] <= oQ[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[4] <= oQ[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[5] <= oQ[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[6] <= oQ[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[7] <= oQ[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[8] <= oQ[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[9] <= oQ[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[10] <= oQ[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[11] <= oQ[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[12] <= oQ[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[13] <= oQ[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[14] <= oQ[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[15] <= oQ[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_DESIGN|mShiftReg:REGB_BLOCK
+iD[0] => oQ.DATAB
+iD[0] => oQ.DATAA
+iD[0] => oQ.DATAB
+iD[0] => oQ.DATAB
+iD[1] => oQ.DATAA
+iD[1] => oQ.DATAB
+iD[1] => oQ.DATAB
+iD[1] => oQ.DATAB
+iD[1] => oQ.DATAB
+iD[2] => oQ.DATAA
+iD[2] => oQ.DATAB
+iD[2] => oQ.DATAB
+iD[2] => oQ.DATAB
+iD[2] => oQ.DATAB
+iD[3] => oQ.DATAA
+iD[3] => oQ.DATAB
+iD[3] => oQ.DATAB
+iD[3] => oQ.DATAB
+iD[3] => oQ.DATAB
+iD[4] => oQ.DATAA
+iD[4] => oQ.DATAB
+iD[4] => oQ.DATAB
+iD[4] => oQ.DATAB
+iD[4] => oQ.DATAB
+iD[5] => oQ.DATAA
+iD[5] => oQ.DATAB
+iD[5] => oQ.DATAB
+iD[5] => oQ.DATAB
+iD[5] => oQ.DATAB
+iD[6] => oQ.DATAA
+iD[6] => oQ.DATAB
+iD[6] => oQ.DATAB
+iD[6] => oQ.DATAB
+iD[6] => oQ.DATAB
+iD[7] => oQ.DATAA
+iD[7] => oQ.DATAB
+iD[7] => oQ.DATAB
+iD[7] => oQ.DATAB
+iD[7] => oQ.DATAB
+iD[8] => oQ.DATAA
+iD[8] => oQ.DATAB
+iD[8] => oQ.DATAB
+iD[8] => oQ.DATAB
+iD[8] => oQ.DATAB
+iD[9] => oQ.DATAA
+iD[9] => oQ.DATAB
+iD[9] => oQ.DATAB
+iD[9] => oQ.DATAB
+iD[9] => oQ.DATAB
+iD[10] => oQ.DATAA
+iD[10] => oQ.DATAB
+iD[10] => oQ.DATAB
+iD[10] => oQ.DATAB
+iD[10] => oQ.DATAB
+iD[11] => oQ.DATAA
+iD[11] => oQ.DATAB
+iD[11] => oQ.DATAB
+iD[11] => oQ.DATAB
+iD[11] => oQ.DATAB
+iD[12] => oQ.DATAA
+iD[12] => oQ.DATAB
+iD[12] => oQ.DATAB
+iD[12] => oQ.DATAB
+iD[12] => oQ.DATAB
+iD[13] => oQ.DATAA
+iD[13] => oQ.DATAB
+iD[13] => oQ.DATAB
+iD[13] => oQ.DATAB
+iD[13] => oQ.DATAB
+iD[14] => oQ.DATAA
+iD[14] => oQ.DATAB
+iD[14] => oQ.DATAB
+iD[14] => oQ.DATAB
+iD[14] => oQ.DATAB
+iD[15] => oQ.DATAA
+iD[15] => oQ.DATAB
+iD[15] => oQ.DATAB
+iD[15] => oQ.DATAB
+iClock => oQ[0]~reg0.CLK
+iClock => oQ[1]~reg0.CLK
+iClock => oQ[2]~reg0.CLK
+iClock => oQ[3]~reg0.CLK
+iClock => oQ[4]~reg0.CLK
+iClock => oQ[5]~reg0.CLK
+iClock => oQ[6]~reg0.CLK
+iClock => oQ[7]~reg0.CLK
+iClock => oQ[8]~reg0.CLK
+iClock => oQ[9]~reg0.CLK
+iClock => oQ[10]~reg0.CLK
+iClock => oQ[11]~reg0.CLK
+iClock => oQ[12]~reg0.CLK
+iClock => oQ[13]~reg0.CLK
+iClock => oQ[14]~reg0.CLK
+iClock => oQ[15]~reg0.CLK
+RegCommand[0] => Equal0.IN2
+RegCommand[0] => Equal1.IN0
+RegCommand[0] => Equal2.IN1
+RegCommand[0] => Equal3.IN2
+RegCommand[1] => Equal0.IN1
+RegCommand[1] => Equal1.IN2
+RegCommand[1] => Equal2.IN0
+RegCommand[1] => Equal3.IN0
+RegCommand[2] => Equal0.IN0
+RegCommand[2] => Equal1.IN1
+RegCommand[2] => Equal2.IN2
+RegCommand[2] => Equal3.IN1
+oQ[0] <= oQ[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[1] <= oQ[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[2] <= oQ[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[3] <= oQ[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[4] <= oQ[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[5] <= oQ[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[6] <= oQ[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[7] <= oQ[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[8] <= oQ[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[9] <= oQ[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[10] <= oQ[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[11] <= oQ[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[12] <= oQ[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[13] <= oQ[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[14] <= oQ[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oQ[15] <= oQ[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

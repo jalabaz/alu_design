@@ -1,0 +1,7 @@
+module mNOTb(input [15:0] iA,input [15:0] iB, output[15:0] oX,output oZeroflagout);
+
+assign oX[15:0] = !iB[15:0];
+
+nor NOR_0(oZeroflagout, oX[2], oX[1], oX[0]);
+
+endmodule

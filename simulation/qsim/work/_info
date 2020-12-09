@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\JZabala\Documents\jnz_codeDirectory\jnzvl_aluproject0\simulation\qsim
+vALU_DESIGN
+Z1 !s100 LmVk6=nXRfnA@;;SR=3]n1
+Z2 ILGM3cQJikBeL@P`Af7X[A1
+Z3 VS=B:80ZDf<l9kniXRm0=i0
+Z4 dC:\Users\JZabala\Documents\jnz_codeDirectory\jnzvl_aluproject0\simulation\qsim
+Z5 w1607480928
+Z6 8ALU_PROJECT.vo
+Z7 FALU_PROJECT.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|ALU_PROJECT.vo|
+Z10 o-work work -O0
+Z11 n@a@l@u_@d@e@s@i@g@n
+!i10b 1
+!s85 0
+Z12 !s108 1607480929.620000
+Z13 !s107 ALU_PROJECT.vo|
+!s101 -O0
+vALU_DESIGN_vlg_check_tst
+!i10b 1
+Z14 !s100 kKVXVe;`nP2MJ3GFTYb7f0
+Z15 I1@EQT7EEUJc9NPMIBeDe?2
+Z16 VJzZJd=5EF9?C?XAKSk65Z3
+R4
+Z17 w1607480927
+Z18 8ALU_PROJECT.vt
+Z19 FALU_PROJECT.vt
+L0 67
+R8
+r1
+!s85 0
+31
+Z20 !s108 1607480929.911000
+Z21 !s107 ALU_PROJECT.vt|
+Z22 !s90 -work|work|ALU_PROJECT.vt|
+!s101 -O0
+R10
+Z23 n@a@l@u_@d@e@s@i@g@n_vlg_check_tst
+vALU_DESIGN_vlg_sample_tst
+!i10b 1
+Z24 !s100 XVYDiH_UUdlk1o>oEMj@63
+Z25 IoWGLOH64]>CiIe]6Fkn[A0
+Z26 VMi]@2STR9^C[Z=F900LBQ0
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@a@l@u_@d@e@s@i@g@n_vlg_sample_tst
+vALU_DESIGN_vlg_vec_tst
+!i10b 1
+!s100 X_iQ:S[mn@@?SX649fRjn2
+I5]hJM80[`@_]bg5n]L2H<1
+Z28 VP?Q[371EIDTBUWd4Ba>XY2
+R4
+R17
+R18
+R19
+Z29 L0 485
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@a@l@u_@d@e@s@i@g@n_vlg_vec_tst
+valuMain
+Z31 !s100 mGaRWART5K`fQmi[?hdjm2
+Z32 I]dH><d@<XJ0NR0YJJ1gOR2
+Z33 Vfm0B>JdkP2[:5dSzIRc:52
+R4
+Z34 w1607249018
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z35 nalu@main
+Z36 !s108 1607249020.175000
+R13
+!i10b 1
+!s85 0
+!s101 -O0
+valuMain_vlg_check_tst
+Z37 !s100 o_6[lXnEd;DYRZGh`E08g0
+Z38 IWkFJQ[6zXj8DQ;fk`mj501
+Z39 Vj6o1@EL4:XbTUJRDdVc=01
+R4
+R34
+R18
+R19
+L0 63
+R8
+r1
+31
+Z40 !s108 1607249020.554000
+Z41 !s107 ALU_PROJECT.vt|
+R22
+R10
+Z42 nalu@main_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+valuMain_vlg_sample_tst
+Z43 !s100 TO`Q=Da1IBI;??0ea]XnZ0
+Z44 IDd17=n20aP<n9zcSoEhZV2
+Z45 VY27Ecm7:FoK`1jnbJ3M5W0
+R4
+R34
+R18
+R19
+L0 29
+R8
+r1
+31
+R40
+R41
+R22
+R10
+Z46 nalu@main_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+valuMain_vlg_vec_tst
+Z47 IXMEz<0;hoPk[JeH043mV[2
+Z48 VCX^40nSI6lj^z3BcViSL<0
+R4
+R34
+R18
+R19
+Z49 L0 481
+R8
+r1
+31
+R40
+R41
+R22
+R10
+Z50 nalu@main_vlg_vec_tst
+Z51 !s100 1[lS2Y8O]b17^[2iQ2_d:3
+!i10b 1
+!s85 0
+!s101 -O0
